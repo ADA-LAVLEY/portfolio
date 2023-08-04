@@ -1,0 +1,92 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+@mixin df($jc,$al){
+      display: flex;
+      justify-content: $jc;
+      align-items: $al;
+}
+$cl:chocolate;
+
+body {
+      max-width: 1440px;
+      margin: 0 auto;
+  
+}
+
+header {
+      padding:0px 50px;
+      background-color: #ebdec7a6;
+      height: 200vh;
+      nav {
+            position: fixed;
+            background-color: #fff;
+            @include df(space-around,center);
+            padding-top: 30px;
+            width: 100%;
+            .link a {
+                  padding: 20px;
+                  font-size: 25px;
+                  text-decoration: none;
+                  color: $cl;
+            }
+      }
+      .asos {
+            @include df(space-around,center);
+         
+            /* margin: 0px 200px; */
+            .text p{
+                  width: 50%;
+            }
+            .text h1 {
+                  font-size: 60px;
+                  width: 70%;
+                  color: $cl;
+            }
+            
+            #img{
+                  display: none;
+            }
+      }
+}
+
+@media(max-width:1024px){
+      header {
+            nav {
+                  #img {
+                        font-size: 30px;
+                  }
+                  @include df(space-between,center);
+                  .link {
+                        display: none;
+                  }
+            }
+      }
+      .asos {
+            .text {
+                  padding-top: 40px;
+                  h3{
+                       font-size: 25px; 
+                  }
+                  h1 {
+                        font-size: 30px;
+                  }
+            }
+      }
+}
+@media (max-width:768px){
+      header {
+           .asos {
+
+           }
+      }
+}
+@media(max-width:425px){
+
+}
+
+@media(max-width:320px){
+
+}
